@@ -15,8 +15,8 @@ export const PROFILE = {
     { he: "מפתח תוכנה Full Stack", en: "Full Stack Software Developer" },
   ] as Loc[],
   tagline: {
-    he: "מנהל ומתחזק מערכות מידע ארגוניות בפרודקשן: תחקור תקלות, עבודה עם SQL Server, ממשקי API ותהליכי אינטגרציה. במקביל מפתח Full Stack ב-Python, FastAPI ו-React, ובוגר הנדסת תוכנה בהצטיינות.",
-    en: "I run and maintain enterprise information systems in production: investigating issues, working with SQL Server, APIs and integration flows. I'm also a full-stack developer in Python, FastAPI and React, and an honors software engineering graduate.",
+    he: "מנהל ומתחזק מערכות מידע ארגוניות בפרודקשן: תחקור תקלות, עבודה עם SQL Server, ממשקי API ותהליכי אינטגרציה. במקביל מפתח Full Stack ב-Python, FastAPI ו-React, והנדסאי תוכנה בוגר בהצטיינות.",
+    en: "I run and maintain enterprise information systems in production: investigating issues, working with SQL Server, APIs and integration flows. I'm also a full-stack developer in Python, FastAPI and React, and a practical software engineering graduate with honors.",
   },
   current: { he: "ONE Technologies · קק\"ל", en: "ONE Technologies · KKL-JNF" },
   location: { he: "באר יעקב", en: "Beer Yaakov, Israel" },
@@ -30,7 +30,7 @@ export type HeroStat = { value: Loc; label: Loc };
 
 export const HERO_STATS: HeroStat[] = [
   { value: { he: "+5", en: "5+" }, label: { he: "שנים בתחום ובמערכות", en: "Years in tech & systems" } },
-  { value: { he: "בהצטיינות", en: "Honors" }, label: { he: "הנדסת תוכנה · ממוצע 91", en: "Software Eng. · GPA 91" } },
+  { value: { he: "בהצטיינות", en: "Honors" }, label: { he: "הנדסאי תוכנה · ממוצע 91", en: "Practical Software Eng. · GPA 91" } },
   { value: { he: "ארגוני", en: "Enterprise" }, label: { he: "מערכות ואינטגרציה", en: "Systems & integration" } },
   { value: { he: "Full Stack", en: "Full Stack" }, label: { he: "פרונט → DevOps", en: "Frontend → DevOps" } },
 ];
@@ -42,7 +42,7 @@ export const CREDIBILITY: Credential[] = [
   { icon: "app", label: { he: "ניהול אפליקציות ארגוניות", en: "Enterprise Application Management" } },
   { icon: "stack", label: { he: "פיתוח Full Stack", en: "Full Stack Development" } },
   { icon: "sql", label: { he: "SQL ואינטגרציית מערכות", en: "SQL & Systems Integration" } },
-  { icon: "degree", label: { he: "הנדסת תוכנה · בהצטיינות", en: "Software Engineering · Honors" } },
+  { icon: "degree", label: { he: "הנדסאי תוכנה · בהצטיינות", en: "Practical Software Engineer · Honors" } },
 ];
 
 /**
@@ -54,7 +54,7 @@ export const HERO_DISCIPLINES: Loc[] = [
   { he: "תשתיות IT", en: "IT Infrastructure" },
   { he: "מערכות מידע", en: "Information Systems" },
   { he: "אינטגרציה", en: "Integration" },
-  { he: "פיתוח תוכנה", en: "Software Engineering" },
+  { he: "פיתוח תוכנה", en: "Software Development" },
 ];
 
 /** Technologies surfaced as animated badges in the hero. */
@@ -101,7 +101,7 @@ export const DIFFERENTIATORS: { title: Loc; text: Loc }[] = [
     title: { he: "תואר יחד עם ניסיון אמיתי", en: "Degree plus real experience" },
     text: {
       he: "תעודת הנדסאי תוכנה בהצטיינות, יחד עם 5+ שנות ניסיון בתפקידי IT ומערכות אמיתיים.",
-      en: "An honors software engineering degree, backed by 5+ years in real IT and systems roles.",
+      en: "An honors practical software engineering diploma, backed by 5+ years in real IT and systems roles.",
     },
   },
 ];
@@ -685,7 +685,7 @@ export const EXPERIENCE: Experience[] = [
       { he: "מוביל תחקור שורש ופתרון של תקלות פרודקשן מורכבות", en: "Lead root-cause investigation and resolution of complex Production issues" },
       { he: "כותב שאילתות SQL ומנתח נתונים כדי לאתר חריגות ולהוביל תיקונים", en: "Author SQL queries and data analysis to detect anomalies and drive fixes" },
       { he: "מנהל את זרימת המידע בין אפליקציות, ERP, בסיסי נתונים ומערכות חיצוניות", en: "Govern data flow across applications, ERP, databases and external systems" },
-      { he: "בונה ומייצב אינטגרציות מול API-ים, בסיסי נתונים ו-Linked Servers", en: "Engineer and stabilize integrations across APIs, databases and Linked Servers" },
+      { he: "בונה ומייצב אינטגרציות מול API-ים, בסיסי נתונים ו-Linked Servers", en: "Build and stabilize integrations across APIs, databases and Linked Servers" },
       { he: "מנתח תהליכים עסקיים, מגדיר דרישות ומטמיע שינויים במערכת", en: "Analyze business processes, define requirements and roll out system changes" },
     ],
     tags: [

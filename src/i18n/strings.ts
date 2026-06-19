@@ -37,7 +37,7 @@ export const SECTIONS: Record<string, Section> = {
     title: { he: "המסע המקצועי שלי", en: "My professional journey" },
     subtitle: {
       he: "מתמיכה טכנית, דרך תשתיות IT וניהול תפעול, ועד מערכות מידע ופיתוח — כל תפקיד בנה את הבא אחריו.",
-      en: "From technical support, through IT infrastructure and operations management, to information systems and engineering — each role built the next.",
+      en: "From technical support, through IT infrastructure and operations management, to information systems and software development — each role built the next.",
     },
   },
   education: {
@@ -58,8 +58,8 @@ export const SECTIONS: Record<string, Section> = {
 export const ABOUT = {
   lead: [
     {
-      he: "מומחה מערכות מידע ואינטגרציה ובוגר הנדסת תוכנה בהצטיינות, עם מעל 5 שנות ניסיון מעשי מול מערכות פרודקשן ארגוניות — לא רק פרויקטים אקדמיים.",
-      en: "An information systems & integration specialist and an honors software engineering graduate, with 5+ years of hands-on experience on real enterprise production systems — not just course projects.",
+      he: "מומחה מערכות מידע ואינטגרציה והנדסאי תוכנה בוגר בהצטיינות, עם מעל 5 שנות ניסיון מעשי מול מערכות פרודקשן ארגוניות — לא רק פרויקטים אקדמיים.",
+      en: "An information systems & integration specialist and an honors practical-software-engineering graduate, with 5+ years of hands-on experience on real enterprise production systems — not just course projects.",
     },
     {
       he: "בפועל אני נע בין שני עולמות: ניהול ותחזוקה של מערכת ארגונית שמאות משתמשים תלויים בה — תחקור תקלות, שאילתות SQL ואינטגרציות מול ERP, ממשקי API ו-Linked Servers — לצד פיתוח Full Stack ב-Python, FastAPI, React ו-TypeScript.",
@@ -68,7 +68,7 @@ export const ABOUT = {
   ] as Loc[],
   stats: [
     { num: { he: "+5 שנים", en: "5+ Years" }, label: { he: "ניסיון מעשי בתעשייה", en: "Hands-on industry experience" } },
-    { num: { he: "בהצטיינות", en: "Honors" }, label: { he: "הנדסת תוכנה · ממוצע 91", en: "Software Engineering · GPA 91" } },
+    { num: { he: "בהצטיינות", en: "Honors" }, label: { he: "הנדסאי תוכנה · ממוצע 91", en: "Practical Software Eng. · GPA 91" } },
     { num: { he: "פרודקשן", en: "Production" }, label: { he: "מערכות ארגוניות ואינטגרציה", en: "Enterprise systems & integration" } },
   ] as { num: Loc; label: Loc }[],
 };

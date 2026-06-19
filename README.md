@@ -1,6 +1,6 @@
 # Nir Avitbul — Portfolio
 
-A professional portfolio website for **Nir Avitbul** — Software Engineer, Application Manager and Full Stack Developer.
+A professional portfolio website for **Nir Avitbul** — Information Systems & Integration Specialist, Application Manager and Full Stack Developer (Practical Software Engineer, honors).
 
 Built as a fast, modern single-page site with a dark premium theme, smooth scrolling, scroll-reveal animations and a fully responsive, mobile-first layout.
 
