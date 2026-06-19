@@ -4,49 +4,61 @@
    ========================================================= */
 
 :root {
-  /* Surfaces — neutral graphite, layered for quiet depth */
-  --bg: #0c0d10;
-  --bg-1: #101216;
-  --bg-elevated: #15171c;
-  --bg-card: #16181d;
-  --bg-card-2: #1b1e24;
-  --bg-card-hover: #20242b;
+  /* ===== LIGHT THEME (default) — clean white, enterprise ===== */
+  color-scheme: light;
+
+  /* Surfaces */
+  --bg: #ffffff;
+  --bg-1: #f5f7f9;
+  --bg-elevated: #ffffff;
+  --bg-card: #ffffff;
+  --bg-card-2: #f8fafc;
+  --bg-card-hover: #f1f5f9;
 
   /* Borders & lines */
-  --border: rgba(255, 255, 255, 0.08);
-  --border-strong: rgba(255, 255, 255, 0.15);
-  --border-glow: rgba(23, 166, 115, 0.32);
+  --border: rgba(15, 23, 42, 0.1);
+  --border-strong: rgba(15, 23, 42, 0.17);
+  --border-glow: rgba(15, 157, 110, 0.32);
 
-  /* Text — clean white, soft neutral gray secondary */
-  --text: #f3f5f7;
-  --text-muted: #b0b6c0;
-  --text-faint: #818892;
+  /* Text — near-black on white, slate secondary */
+  --text: #0f1722;
+  --text-muted: #4a5568;
+  --text-faint: #6b7688;
 
   /* Single restrained accent (professional emerald) */
-  --brand: #17a673;
-  --brand-2: #17a673;
-  --brand-3: #17a673;
-  --brand-soft: rgba(23, 166, 115, 0.13);
-  --gradient: linear-gradient(180deg, #1cb37c 0%, #138a5f 100%);
-  /* Headings render as clean white with a touch of depth — no rainbow. */
-  --gradient-text: linear-gradient(180deg, #ffffff 0%, #cfd4dc 100%);
+  --brand: #0f9d6e;
+  --brand-2: #0f9d6e;
+  --brand-3: #0f9d6e;
+  --brand-soft: rgba(15, 157, 110, 0.1);
+  --gradient: linear-gradient(180deg, #14b07d 0%, #0d8a60 100%);
+  /* Headings render dark on light — clip-friendly. */
+  --gradient-text: linear-gradient(180deg, #0f1722 0%, #334155 100%);
 
-  /* Card accents — muted, desaturated (no neon) */
-  --accent-indigo: #2bb88a;
-  --accent-rose: #93a2bb;
-  --accent-emerald: #17a673;
-  --accent-amber: #c2a06a;
+  /* Card accents — readable on white */
+  --accent-indigo: #0e9b6c;
+  --accent-rose: #5b6472;
+  --accent-emerald: #0f9d6e;
+  --accent-amber: #b45309;
+
+  /* Theme-dependent fills, overlays, chrome */
+  --fill-1: rgba(15, 23, 42, 0.03);
+  --fill-2: rgba(15, 23, 42, 0.05);
+  --fill-3: rgba(15, 23, 42, 0.08);
+  --overlay: rgba(15, 23, 42, 0.04);
+  --header-bg: rgba(255, 255, 255, 0.85);
+  --header-bg-solid: rgba(255, 255, 255, 0.98);
+  --scrollbar-thumb: #cbd5e1;
+  --scrollbar-thumb-hover: #94a3b8;
 
   /* Effects */
   --radius-lg: 20px;
   --radius: 14px;
   --radius-sm: 10px;
-  --shadow-card: 0 1px 0 0 rgba(255, 255, 255, 0.03) inset,
-    0 14px 34px -26px rgba(0, 0, 0, 0.85);
-  --shadow-hover: 0 1px 0 0 rgba(255, 255, 255, 0.05) inset,
-    0 24px 50px -30px rgba(0, 0, 0, 0.9);
-  /* Neutral, no colored glow */
-  --shadow-glow: 0 26px 60px -34px rgba(0, 0, 0, 0.75);
+  --shadow-card: 0 1px 2px rgba(15, 23, 42, 0.05),
+    0 10px 28px -20px rgba(15, 23, 42, 0.18);
+  --shadow-hover: 0 2px 6px rgba(15, 23, 42, 0.08),
+    0 20px 44px -24px rgba(15, 23, 42, 0.24);
+  --shadow-glow: 0 20px 50px -34px rgba(15, 23, 42, 0.22);
 
   /* Layout */
   --container: 1140px;
@@ -56,6 +68,52 @@
   --font-sans: "Inter", "Heebo", system-ui, -apple-system, "Segoe UI",
     Roboto, "Helvetica Neue", Arial, sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+/* ===== DARK THEME (opt-in via toggle) — graphite + emerald ===== */
+html[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #0c0d10;
+  --bg-1: #101216;
+  --bg-elevated: #15171c;
+  --bg-card: #16181d;
+  --bg-card-2: #1b1e24;
+  --bg-card-hover: #20242b;
+
+  --border: rgba(255, 255, 255, 0.08);
+  --border-strong: rgba(255, 255, 255, 0.15);
+  --border-glow: rgba(23, 166, 115, 0.32);
+
+  --text: #f3f5f7;
+  --text-muted: #b0b6c0;
+  --text-faint: #818892;
+
+  --brand: #17a673;
+  --brand-2: #17a673;
+  --brand-3: #17a673;
+  --brand-soft: rgba(23, 166, 115, 0.13);
+  --gradient: linear-gradient(180deg, #1cb37c 0%, #138a5f 100%);
+  --gradient-text: linear-gradient(180deg, #ffffff 0%, #cfd4dc 100%);
+
+  --accent-indigo: #2bb88a;
+  --accent-rose: #93a2bb;
+  --accent-emerald: #17a673;
+  --accent-amber: #c2a06a;
+
+  --fill-1: rgba(255, 255, 255, 0.04);
+  --fill-2: rgba(255, 255, 255, 0.07);
+  --fill-3: rgba(255, 255, 255, 0.1);
+  --overlay: rgba(0, 0, 0, 0.22);
+  --header-bg: rgba(12, 13, 16, 0.72);
+  --header-bg-solid: rgba(12, 13, 16, 0.97);
+  --scrollbar-thumb: #2a2e36;
+  --scrollbar-thumb-hover: #353a44;
+
+  --shadow-card: 0 1px 0 0 rgba(255, 255, 255, 0.045) inset,
+    0 14px 34px -26px rgba(0, 0, 0, 0.85);
+  --shadow-hover: 0 1px 0 0 rgba(255, 255, 255, 0.055) inset,
+    0 24px 50px -30px rgba(0, 0, 0, 0.9);
+  --shadow-glow: 0 26px 60px -34px rgba(0, 0, 0, 0.75);
 }
 
 /* Hebrew-first: Heebo handles Hebrew + embedded Latin for a consistent line. */
@@ -146,12 +204,12 @@ button {
   background: var(--bg);
 }
 ::-webkit-scrollbar-thumb {
-  background: #2a2e36;
+  background: var(--scrollbar-thumb);
   border-radius: 999px;
   border: 3px solid var(--bg);
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #353a44;
+  background: var(--scrollbar-thumb-hover);
 }
 
 /* ---------- Layout ---------- */
@@ -248,13 +306,13 @@ button {
   box-shadow: 0 16px 32px -14px rgba(23, 166, 115, 0.6);
 }
 .btn--ghost {
-  background: rgba(255, 255, 255, 0.035);
+  background: var(--fill-1);
   border-color: var(--border-strong);
   color: var(--text);
 }
 .btn--ghost:hover {
   transform: translateY(-2px);
-  background: rgba(255, 255, 255, 0.07);
+  background: var(--fill-2);
   border-color: var(--brand);
 }
 
@@ -280,7 +338,7 @@ button {
   border-bottom: 1px solid transparent;
 }
 .header.is-scrolled {
-  background: rgba(6, 8, 15, 0.72);
+  background: var(--header-bg);
   backdrop-filter: blur(16px) saturate(150%);
   border-bottom-color: var(--border);
 }
@@ -365,7 +423,7 @@ button {
   padding: 0 var(--gutter);
   max-height: 0;
   overflow: hidden;
-  background: rgba(6, 8, 15, 0.97);
+  background: var(--header-bg-solid);
   backdrop-filter: blur(16px);
   border-bottom: 1px solid transparent;
   transition: max-height 0.35s ease, padding 0.35s ease, border-color 0.35s ease;
@@ -511,7 +569,7 @@ button {
   padding: 7px 15px;
   border-radius: 999px;
   border: 1px solid var(--border-strong);
-  background: rgba(255, 255, 255, 0.03);
+  background: var(--fill-1);
   color: var(--text-muted);
   font-size: 0.85rem;
   font-weight: 500;
@@ -584,7 +642,7 @@ button {
   padding: 8px 14px;
   border-radius: 11px;
   border: 1px solid var(--border-strong);
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--fill-2);
   font-size: 0.88rem;
   font-weight: 600;
   color: var(--text);
@@ -596,7 +654,7 @@ button {
 }
 .hero__badge:hover {
   border-color: var(--border-glow);
-  background: rgba(255, 255, 255, 0.06);
+  background: var(--fill-2);
   color: var(--text);
   transform: translateY(-3px);
 }
@@ -687,7 +745,7 @@ button {
   padding: 6px 12px;
   border-radius: 999px;
   border: 1px solid var(--border);
-  background: rgba(255, 255, 255, 0.04);
+  background: var(--fill-1);
   font-size: 0.78rem;
   color: var(--text-muted);
 }
@@ -749,7 +807,7 @@ button {
   padding: 11px;
   border-radius: 12px;
   border: 1px solid var(--border);
-  background: rgba(255, 255, 255, 0.03);
+  background: var(--fill-1);
   font-size: 0.88rem;
   font-weight: 500;
   color: var(--text);
@@ -757,7 +815,7 @@ button {
 }
 .profile-card__link:hover {
   border-color: var(--border-glow);
-  background: rgba(255, 255, 255, 0.07);
+  background: var(--fill-2);
   transform: translateY(-2px);
 }
 
@@ -977,7 +1035,7 @@ button {
   width: 30px;
   height: 30px;
   border-radius: 9px;
-  background: rgba(255, 255, 255, 0.04);
+  background: var(--fill-1);
   border: 1px solid var(--border);
 }
 .skill__level {
@@ -991,7 +1049,7 @@ button {
 .skill__bar {
   height: 6px;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.06);
+  background: var(--fill-2);
   overflow: hidden;
 }
 .skill__bar-fill {
@@ -1010,7 +1068,7 @@ button {
   height: 56px;
   flex-shrink: 0;
   border-radius: 15px;
-  background: rgba(255, 255, 255, 0.04);
+  background: var(--fill-1);
   border: 1px solid var(--border-strong);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
 }
@@ -1068,7 +1126,7 @@ button {
 .project__featured-side {
   padding: 26px;
   border-radius: var(--radius);
-  background: rgba(0, 0, 0, 0.22);
+  background: var(--overlay);
   border: 1px solid var(--border);
 }
 .project__side-label {
@@ -1168,7 +1226,7 @@ button {
   padding: 5px 12px;
   border-radius: 999px;
   border: 1px solid var(--border-strong);
-  background: rgba(255, 255, 255, 0.04);
+  background: var(--fill-1);
   color: var(--text);
   font-size: 0.82rem;
   font-weight: 600;
@@ -1203,7 +1261,7 @@ button {
   gap: 6px;
   padding: 7px 13px;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.07);
+  background: var(--fill-2);
   border: 1px solid var(--border-strong);
   font-size: 0.84rem;
   font-weight: 600;
@@ -1248,7 +1306,7 @@ button {
   font-weight: 500;
   padding: 6px 11px;
   border-radius: 8px;
-  background: rgba(255, 255, 255, 0.06);
+  background: var(--fill-2);
   border: 1px solid var(--border-strong);
   color: var(--text);
 }
@@ -1296,7 +1354,7 @@ button {
   gap: 12px;
   padding: 18px 20px;
   border-radius: var(--radius-sm);
-  background: rgba(0, 0, 0, 0.2);
+  background: var(--overlay);
   border: 1px solid var(--border);
 }
 .pso__row {
@@ -1427,12 +1485,12 @@ button {
   height: 40px;
   border-radius: 11px;
   border: 1px solid var(--border-strong);
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--fill-2);
   color: var(--text);
   transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
 }
 .modal__close:hover {
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--fill-3);
   border-color: var(--brand);
   transform: rotate(90deg);
 }
@@ -1850,7 +1908,7 @@ button {
   padding: 5px 12px;
   border-radius: 999px;
   border: 1px solid var(--border);
-  background: rgba(255, 255, 255, 0.03);
+  background: var(--fill-1);
   font-family: var(--font-mono);
   font-size: 0.74rem;
   color: var(--text-faint);
@@ -2032,7 +2090,7 @@ a.contact__meta-item:hover {
   padding: 6px 14px;
   border-radius: 999px;
   border: 1px solid var(--border);
-  background: rgba(255, 255, 255, 0.03);
+  background: var(--fill-1);
   font-family: var(--font-mono);
   font-size: 0.78rem;
   color: var(--text-muted);
@@ -2047,7 +2105,7 @@ a.contact__meta-item:hover {
   margin-top: 20px;
   padding: 14px 16px;
   border-radius: var(--radius-sm);
-  background: rgba(0, 0, 0, 0.22);
+  background: var(--overlay);
   border: 1px solid var(--border);
   color: var(--text);
   font-size: 0.94rem;
@@ -2229,7 +2287,7 @@ a.contact__meta-item:hover {
   padding: 8px 14px;
   border-radius: 10px;
   border: 1px solid var(--border-strong);
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--fill-2);
   font-size: 0.9rem;
   font-weight: 600;
   color: var(--text);
@@ -2268,7 +2326,7 @@ a.contact__meta-item:hover {
   padding: 16px;
   border-radius: var(--radius-sm);
   border: 1px solid var(--border);
-  background: rgba(0, 0, 0, 0.2);
+  background: var(--overlay);
   text-align: center;
 }
 .education__stat-num {
@@ -2296,7 +2354,7 @@ a.contact__meta-item:hover {
   padding: 7px 15px;
   border-radius: 999px;
   border: 1px solid var(--border-strong);
-  background: rgba(255, 255, 255, 0.04);
+  background: var(--fill-1);
   color: var(--text-muted);
   font-size: 0.86rem;
   font-weight: 500;
@@ -2314,7 +2372,7 @@ a.contact__meta-item:hover {
   padding: 14px 16px;
   border-radius: var(--radius-sm);
   border: 1px solid var(--border);
-  background: rgba(0, 0, 0, 0.22);
+  background: var(--overlay);
 }
 .project__metric-value {
   display: block;
@@ -2400,6 +2458,25 @@ a.contact__meta-item:hover {
   .hero__disciplines { flex-direction: column; align-items: flex-start; }
 }
 
+/* ---------- Theme toggle ---------- */
+.themetoggle {
+  display: inline-grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  flex-shrink: 0;
+  border-radius: 999px;
+  border: 1px solid var(--border-strong);
+  background: var(--fill-1);
+  color: var(--text-muted);
+  transition: color 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+}
+.themetoggle:hover {
+  color: var(--text);
+  border-color: var(--brand);
+  background: var(--brand-soft);
+}
+
 /* ---------- Language switch ---------- */
 .langswitch {
   display: inline-flex;
@@ -2408,7 +2485,7 @@ a.contact__meta-item:hover {
   padding: 3px;
   border-radius: 999px;
   border: 1px solid var(--border-strong);
-  background: rgba(255, 255, 255, 0.04);
+  background: var(--fill-1);
 }
 .langswitch__btn {
   padding: 6px 13px;

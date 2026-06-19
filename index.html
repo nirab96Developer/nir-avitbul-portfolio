@@ -8,6 +8,8 @@
         var l = localStorage.getItem("lang") || "he";
         document.documentElement.lang = l;
         document.documentElement.dir = l === "he" ? "rtl" : "ltr";
+        var th = localStorage.getItem("theme") || "light";
+        document.documentElement.setAttribute("data-theme", th);
       } catch (e) {}
     </script>
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />

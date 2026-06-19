@@ -80,6 +80,7 @@ export const UI: Record<string, Loc> = {
   available: { he: "זמין", en: "Available" },
   highlights: { he: "דגשים", en: "Highlights" },
   primaryNav: { he: "ניווט ראשי", en: "Primary" },
+  toggleTheme: { he: "מצב כהה / בהיר", en: "Toggle light / dark" },
   home: { he: "ניר אביטבול — דף הבית", en: "Nir Avitbul — home" },
   toggleNav: { he: "תפריט", en: "Toggle navigation" },
 

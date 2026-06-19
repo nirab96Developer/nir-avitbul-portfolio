@@ -1,10 +1,47 @@
 import { useEffect, useState } from "react";
+import { TbMoon, TbSun } from "react-icons/tb";
 import { useActiveSection } from "../hooks/useActiveSection";
 import { useLang } from "../i18n/LanguageContext";
 import { NAV, UI } from "../i18n/strings";
 import { PROFILE } from "../data/content";
 
 const sectionIds = NAV.map((l) => l.href.slice(1));
+
+type Theme = "light" | "dark";
+
+function readTheme(): Theme {
+  if (typeof document !== "undefined") {
+    const t = document.documentElement.getAttribute("data-theme");
+    if (t === "dark" || t === "light") return t;
+  }
+  return "light";
+}
+
+function ThemeToggle() {
+  const { t } = useLang();
+  const [theme, setTheme] = useState<Theme>(readTheme);
+
+  useEffect(() => {
+    document.documentElement.setAttribute("data-theme", theme);
+    try {
+      localStorage.setItem("theme", theme);
+    } catch {
+      /* ignore */
+    }
+  }, [theme]);
+
+  return (
+    <button
+      type="button"
+      className="themetoggle"
+      onClick={() => setTheme((p) => (p === "dark" ? "light" : "dark"))}
+      aria-label={t(UI.toggleTheme)}
+      title={t(UI.toggleTheme)}
+    >
+      {theme === "dark" ? <TbSun size={18} /> : <TbMoon size={18} />}
+    </button>
+  );
+}
 
 function LanguageSwitch() {
   const { lang, setLang } = useLang();
@@ -64,6 +101,7 @@ export default function Header() {
         </nav>
 
         <div className="header__actions">
+          <ThemeToggle />
           <LanguageSwitch />
           <a href="#contact" className="btn btn--primary btn--sm header__cta">
             {t(UI.getInTouch)}
@@ -95,6 +133,7 @@ export default function Header() {
         ))}
         <div className="header__mobile-lang">
           <LanguageSwitch />
+          <ThemeToggle />
         </div>
         <a href="#contact" className="btn btn--primary" onClick={() => setMenuOpen(false)}>
           {t(UI.getInTouch)}
