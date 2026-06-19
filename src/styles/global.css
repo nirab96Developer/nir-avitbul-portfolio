@@ -25,20 +25,23 @@
   --text-muted: #4a5568;
   --text-faint: #6b7688;
 
-  /* Single restrained accent (professional emerald) */
-  --brand: #0f9d6e;
-  --brand-2: #0f9d6e;
-  --brand-3: #0f9d6e;
-  --brand-soft: rgba(15, 157, 110, 0.1);
-  --gradient: linear-gradient(180deg, #14b07d 0%, #0d8a60 100%);
+  /* Monochrome ink accent — timeless, enterprise */
+  --brand: #17181c;
+  --brand-2: #17181c;
+  --brand-3: #17181c;
+  --brand-soft: rgba(17, 24, 28, 0.06);
+  --on-brand: #ffffff;
+  --accent-wash: rgba(17, 24, 28, 0.045);
+  --gradient: linear-gradient(180deg, #2b2e36 0%, #17181c 100%);
   /* Headings render dark on light — clip-friendly. */
-  --gradient-text: linear-gradient(180deg, #0f1722 0%, #334155 100%);
+  --gradient-text: linear-gradient(180deg, #0f1722 0%, #3a4252 100%);
 
-  /* Card accents — readable on white */
-  --accent-indigo: #0e9b6c;
+  /* Card accents — subtle neutral tones on white */
+  --accent-indigo: #17181c;
   --accent-rose: #5b6472;
-  --accent-emerald: #0f9d6e;
-  --accent-amber: #b45309;
+  --accent-emerald: #2f6f57;
+  --accent-amber: #8a6a3a;
+  --status: #16a34a;
 
   /* Theme-dependent fills, overlays, chrome */
   --fill-1: rgba(15, 23, 42, 0.03);
@@ -88,17 +91,20 @@ html[data-theme="dark"] {
   --text-muted: #b0b6c0;
   --text-faint: #818892;
 
-  --brand: #17a673;
-  --brand-2: #17a673;
-  --brand-3: #17a673;
-  --brand-soft: rgba(23, 166, 115, 0.13);
-  --gradient: linear-gradient(180deg, #1cb37c 0%, #138a5f 100%);
-  --gradient-text: linear-gradient(180deg, #ffffff 0%, #cfd4dc 100%);
+  --brand: #f2f4f7;
+  --brand-2: #f2f4f7;
+  --brand-3: #f2f4f7;
+  --brand-soft: rgba(255, 255, 255, 0.1);
+  --on-brand: #14151a;
+  --accent-wash: rgba(255, 255, 255, 0.05);
+  --gradient: linear-gradient(180deg, #ffffff 0%, #d9dde4 100%);
+  --gradient-text: linear-gradient(180deg, #ffffff 0%, #c2c8d2 100%);
 
-  --accent-indigo: #2bb88a;
-  --accent-rose: #93a2bb;
-  --accent-emerald: #17a673;
-  --accent-amber: #c2a06a;
+  --accent-indigo: #c7cdd8;
+  --accent-rose: #aab2c0;
+  --accent-emerald: #8fc7b0;
+  --accent-amber: #d2b487;
+  --status: #34d399;
 
   --fill-1: rgba(255, 255, 255, 0.04);
   --fill-2: rgba(255, 255, 255, 0.07);
@@ -297,7 +303,7 @@ button {
 }
 .btn--primary {
   background: var(--brand);
-  color: #ffffff;
+  color: var(--on-brand);
   box-shadow: 0 10px 24px -14px rgba(23, 166, 115, 0.7);
 }
 .btn--primary:hover {
@@ -361,10 +367,10 @@ button {
   height: 38px;
   border-radius: 11px;
   background: var(--gradient);
-  color: #ffffff;
+  color: var(--on-brand);
   font-weight: 800;
   font-size: 0.9rem;
-  box-shadow: 0 8px 20px -8px rgba(99, 102, 241, 0.8);
+  box-shadow: 0 8px 20px -8px rgba(0, 0, 0, 0.22);
 }
 .header__name {
   font-size: 1.02rem;
@@ -471,7 +477,7 @@ button {
   height: 30px;
   border-radius: 8px;
   background: var(--gradient);
-  color: #ffffff;
+  color: var(--on-brand);
   font-weight: 800;
   font-size: 0.78rem;
 }
@@ -579,7 +585,7 @@ button {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: var(--accent-emerald);
+  background: var(--status);
   box-shadow: 0 0 0 0 rgba(52, 211, 153, 0.6);
   animation: pulse 2.4s infinite;
 }
@@ -682,7 +688,7 @@ button {
   content: "";
   position: absolute;
   inset: 0;
-  background: radial-gradient(120% 80% at 50% -10%, rgba(99, 102, 241, 0.22), transparent 60%);
+  background: radial-gradient(120% 80% at 50% -10%, var(--accent-wash), transparent 60%);
   pointer-events: none;
 }
 .profile-card__top {
@@ -1057,7 +1063,7 @@ button {
   height: 100%;
   border-radius: 999px;
   background: var(--gradient);
-  box-shadow: 0 0 12px -2px rgba(99, 102, 241, 0.7);
+  box-shadow: 0 0 12px -2px rgba(0, 0, 0, 0.2);
 }
 
 /* ---------- Projects ---------- */
@@ -1108,7 +1114,7 @@ button {
   content: "";
   position: absolute;
   inset: 0;
-  background: radial-gradient(80% 120% at 100% 0%, rgba(99, 102, 241, 0.16), transparent 55%);
+  background: radial-gradient(80% 120% at 100% 0%, var(--accent-wash), transparent 55%);
   pointer-events: none;
 }
 .project__featured-main,
@@ -1128,7 +1134,7 @@ button {
   gap: 6px;
   padding: 6px 13px;
   border-radius: 999px;
-  background: linear-gradient(135deg, rgba(99, 102, 241, 0.25), rgba(34, 211, 238, 0.18));
+  background: var(--brand-soft);
   border: 1px solid var(--border-glow);
   color: var(--text);
   font-size: 0.76rem;
@@ -1397,8 +1403,8 @@ button {
 }
 .pso__label--solution {
   color: #a5b4fc;
-  background: rgba(129, 140, 248, 0.14);
-  border: 1px solid rgba(129, 140, 248, 0.3);
+  background: var(--brand-soft);
+  border: 1px solid var(--border-strong);
 }
 .pso__label--outcome {
   color: #6ee7b7;
@@ -1626,7 +1632,7 @@ button {
 }
 .carousel__nav:hover {
   background: var(--brand);
-  color: #ffffff;
+  color: var(--on-brand);
 }
 .carousel__nav--prev { left: 14px; }
 .carousel__nav--next { right: 14px; }
@@ -1723,7 +1729,7 @@ button {
   flex-shrink: 0;
   border-radius: 14px;
   color: var(--brand-2);
-  background: linear-gradient(135deg, rgba(99, 102, 241, 0.18), rgba(34, 211, 238, 0.12));
+  background: var(--brand-soft);
   border: 1px solid var(--border-glow);
 }
 .impact__heading {
@@ -1802,7 +1808,7 @@ button {
   flex-shrink: 0;
   border-radius: 8px;
   background: var(--gradient);
-  color: #ffffff;
+  color: var(--on-brand);
   font-family: var(--font-mono);
   font-size: 0.78rem;
   font-weight: 700;
@@ -1844,9 +1850,9 @@ button {
   width: 40px;
   height: 40px;
   border-radius: 12px;
-  color: #ffffff;
+  color: var(--on-brand);
   background: var(--gradient);
-  box-shadow: 0 10px 24px -10px rgba(99, 102, 241, 0.9);
+  box-shadow: 0 10px 24px -10px rgba(0, 0, 0, 0.25);
 }
 .timeline__content {
   padding: 28px 30px;
@@ -1880,7 +1886,7 @@ button {
   padding: 4px 11px;
   border-radius: 999px;
   border: 1px solid var(--border-strong);
-  background: rgba(99, 102, 241, 0.1);
+  background: var(--brand-soft);
   color: var(--brand-2);
   font-family: var(--font-mono);
   font-size: 0.72rem;
@@ -1894,14 +1900,14 @@ button {
   padding: 4px 11px;
   border-radius: 999px;
   background: var(--gradient);
-  color: #ffffff;
+  color: var(--on-brand);
   font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.03em;
 }
 .timeline__item--current .timeline__content {
   border-color: var(--border-strong);
-  box-shadow: 0 0 0 1px rgba(99, 102, 241, 0.25), var(--shadow-card);
+  box-shadow: 0 0 0 1px var(--border-strong), var(--shadow-card);
 }
 .timeline__role {
   font-size: 1.3rem;
@@ -1977,7 +1983,7 @@ button {
   padding: clamp(40px, 6vw, 68px);
   border: 1px solid var(--border-strong);
   border-radius: 28px;
-  background: radial-gradient(120% 140% at 50% 0%, rgba(99, 102, 241, 0.16), transparent 60%),
+  background: radial-gradient(120% 140% at 50% 0%, var(--accent-wash), transparent 60%),
     linear-gradient(160deg, var(--bg-card-2), var(--bg-card));
   box-shadow: var(--shadow-glow), var(--shadow-card);
   overflow: hidden;
@@ -2047,7 +2053,7 @@ a.contact__meta-item:hover {
   content: "";
   position: absolute;
   inset: 0;
-  background: radial-gradient(80% 120% at 0% 0%, rgba(99, 102, 241, 0.16), transparent 55%);
+  background: radial-gradient(80% 120% at 0% 0%, var(--accent-wash), transparent 55%);
   pointer-events: none;
 }
 .education__degree-head {
@@ -2064,7 +2070,7 @@ a.contact__meta-item:hover {
   height: 54px;
   border-radius: 14px;
   color: var(--brand-2);
-  background: linear-gradient(135deg, rgba(99, 102, 241, 0.18), rgba(34, 211, 238, 0.12));
+  background: var(--brand-soft);
   border: 1px solid var(--border-glow);
 }
 .education__honor {
@@ -2073,7 +2079,7 @@ a.contact__meta-item:hover {
   gap: 6px;
   padding: 6px 13px;
   border-radius: 999px;
-  background: linear-gradient(135deg, rgba(99, 102, 241, 0.25), rgba(34, 211, 238, 0.18));
+  background: var(--brand-soft);
   border: 1px solid var(--border-glow);
   font-size: 0.76rem;
   font-weight: 600;
@@ -2252,7 +2258,7 @@ a.contact__meta-item:hover {
   height: 40px;
   border-radius: 11px;
   color: var(--brand-2);
-  background: linear-gradient(135deg, rgba(99, 102, 241, 0.2), rgba(34, 211, 238, 0.12));
+  background: var(--brand-soft);
   border: 1px solid var(--border-glow);
   margin-bottom: 16px;
 }
@@ -2279,7 +2285,7 @@ a.contact__meta-item:hover {
   padding: 18px 22px;
   border-radius: var(--radius);
   border: 1px solid var(--border-strong);
-  background: radial-gradient(120% 160% at 0% 0%, rgba(99, 102, 241, 0.12), transparent 60%),
+  background: radial-gradient(120% 160% at 0% 0%, var(--accent-wash), transparent 60%),
     var(--bg-card);
 }
 .skills__core-label {
@@ -2316,7 +2322,7 @@ a.contact__meta-item:hover {
   margin-top: 16px;
   padding: 13px 16px;
   border-radius: var(--radius-sm);
-  background: linear-gradient(135deg, rgba(99, 102, 241, 0.16), rgba(34, 211, 238, 0.1));
+  background: var(--brand-soft);
   border: 1px solid var(--border-glow);
   color: var(--text);
   font-weight: 600;
@@ -2406,8 +2412,8 @@ a.contact__meta-item:hover {
   color: var(--text-muted);
 }
 .project__featured-tag--flagship {
-  background: linear-gradient(135deg, rgba(251, 191, 36, 0.26), rgba(99, 102, 241, 0.22));
-  border-color: rgba(251, 191, 36, 0.45);
+  background: var(--brand-soft);
+  border-color: var(--border-strong);
 }
 
 /* ---------- Accessibility: focus ---------- */
