@@ -87,8 +87,12 @@ function FeaturedProject({ project, onOpen }: { project: Project; onOpen: () => 
       <article className="project__card project__card--featured">
         <div className="project__featured-main">
           <div className="project__featured-head">
-            <span className="project__glyph">
-              <TechIcon name={project.icon} size={30} />
+            <span className={`project__glyph${project.logo ? " project__glyph--logo" : ""}`}>
+              {project.logo ? (
+                <img src={project.logo} alt={`${project.title} logo`} width={34} height={34} />
+              ) : (
+                <TechIcon name={project.icon} size={30} />
+              )}
             </span>
             <span
               className={`project__featured-tag${project.flagship ? " project__featured-tag--flagship" : ""}`}

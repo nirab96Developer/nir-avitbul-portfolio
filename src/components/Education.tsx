@@ -50,6 +50,13 @@ export default function Education() {
             </div>
 
             <p className="education__final">
+              <img
+                className="education__final-logo"
+                src="/forewise-logo.svg"
+                alt="Forewise logo"
+                width={20}
+                height={20}
+              />
               <TbTrophy size={16} /> {t(degree.finalProject)}
             </p>
 

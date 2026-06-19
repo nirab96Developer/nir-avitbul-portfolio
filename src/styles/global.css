@@ -1072,6 +1072,21 @@ button {
   border: 1px solid var(--border-strong);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
 }
+.project__glyph--logo {
+  background: #ffffff;
+  border-color: var(--border);
+}
+.project__glyph--logo img {
+  width: 70%;
+  height: 70%;
+  object-fit: contain;
+}
+.education__final-logo {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
 
 /* Featured */
 .project--featured {

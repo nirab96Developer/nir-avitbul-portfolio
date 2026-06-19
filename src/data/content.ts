@@ -196,6 +196,8 @@ export type Metric = { value: string; label: Loc };
 export type Project = {
   title: string;
   icon: string;
+  /** Optional brand logo (path under /public) shown instead of the tech glyph. */
+  logo?: string;
   summary: Loc;
   description: Loc;
   highlights: Loc[];
@@ -219,6 +221,7 @@ export const PROJECTS: Project[] = [
   {
     title: "Forewise",
     icon: "RBAC",
+    logo: "/forewise-logo.svg",
     summary: {
       he: "פרויקט גמר (ציון 100) · FastAPI + React · בפרודקשן",
       en: "Graduation final project (graded 100) · FastAPI + React · in production",

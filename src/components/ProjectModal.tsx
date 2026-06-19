@@ -70,8 +70,12 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
         </button>
 
         <header className="modal__head">
-          <span className="project__glyph">
-            <TechIcon name={project.icon} size={28} />
+          <span className={`project__glyph${project.logo ? " project__glyph--logo" : ""}`}>
+            {project.logo ? (
+              <img src={project.logo} alt={`${project.title} logo`} width={30} height={30} />
+            ) : (
+              <TechIcon name={project.icon} size={28} />
+            )}
           </span>
           <div>
             <p className="modal__eyebrow">{t(UI.caseStudy)}</p>
