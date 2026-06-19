@@ -75,6 +75,7 @@ export const ABOUT = {
 
 export const UI: Record<string, Loc> = {
   viewMyWork: { he: "לעבודות שלי", en: "View my work" },
+  downloadCv: { he: "הורדת קורות חיים", en: "Download CV" },
   getInTouch: { he: "דברו איתי", en: "Get in touch" },
   scroll: { he: "גלילה", en: "Scroll" },
   available: { he: "זמין", en: "Available" },

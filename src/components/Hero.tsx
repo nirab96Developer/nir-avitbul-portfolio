@@ -5,6 +5,7 @@ import {
   TbBrandLinkedinFilled,
   TbMapPin,
   TbBriefcase2,
+  TbDownload,
 } from "react-icons/tb";
 import { PROFILE, HERO_STATS, HERO_TECH, HERO_DISCIPLINES } from "../data/content";
 import { useLang } from "../i18n/LanguageContext";
@@ -70,6 +71,13 @@ export default function Hero() {
               </a>
               <a href="#contact" className="btn btn--ghost">
                 {t(UI.getInTouch)}
+              </a>
+              <a
+                href={PROFILE.cv}
+                download="Nir-Avitbul-CV.pdf"
+                className="btn btn--ghost"
+              >
+                <TbDownload size={18} /> {t(UI.downloadCv)}
               </a>
             </div>
 

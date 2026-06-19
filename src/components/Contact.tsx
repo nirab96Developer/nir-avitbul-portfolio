@@ -6,6 +6,7 @@ import {
   TbMail,
   TbMapPin,
   TbPhone,
+  TbDownload,
 } from "react-icons/tb";
 import { PROFILE } from "../data/content";
 import { useLang } from "../i18n/LanguageContext";
@@ -54,6 +55,13 @@ export default function Contact() {
               className="btn btn--ghost"
             >
               <TbBrandWhatsapp size={20} /> {t(UI.whatsapp)}
+            </a>
+            <a
+              href={PROFILE.cv}
+              download="Nir-Avitbul-CV.pdf"
+              className="btn btn--ghost"
+            >
+              <TbDownload size={19} /> {t(UI.downloadCv)}
             </a>
             <a
               href={PROFILE.github}
