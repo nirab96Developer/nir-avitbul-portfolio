@@ -22,6 +22,9 @@ export const PROFILE = {
   location: { he: "באר יעקב", en: "Beer Yaakov, Israel" },
   availability: { he: "פתוח להזדמנויות חדשות", en: "Open to new opportunities" },
   email: "avitbulnir@gmail.com",
+  phone: "053-529-3308",
+  phoneTel: "+972535293308",
+  phoneWa: "972535293308",
   github: "https://github.com/nirab96Developer",
   linkedin: "https://www.linkedin.com/in/nir-avitbul",
 } as const;

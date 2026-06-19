@@ -1,9 +1,11 @@
 import {
   TbBrandGithub,
   TbBrandLinkedinFilled,
+  TbBrandWhatsapp,
   TbArrowUpRight,
   TbMail,
   TbMapPin,
+  TbPhone,
 } from "react-icons/tb";
 import { PROFILE } from "../data/content";
 import { useLang } from "../i18n/LanguageContext";
@@ -29,6 +31,13 @@ export default function Contact() {
             <a href={`mailto:${PROFILE.email}`} className="contact__meta-item">
               <TbMail size={16} /> {PROFILE.email}
             </a>
+            <a
+              href={`tel:${PROFILE.phoneTel}`}
+              className="contact__meta-item"
+              dir="ltr"
+            >
+              <TbPhone size={16} /> {PROFILE.phone}
+            </a>
             <span className="contact__meta-item">
               <TbMapPin size={16} /> {t(PROFILE.location)}
             </span>
@@ -37,6 +46,14 @@ export default function Contact() {
           <div className="contact__actions">
             <a href={`mailto:${PROFILE.email}`} className="btn btn--primary">
               <TbMail size={19} /> {t(UI.emailMe)}
+            </a>
+            <a
+              href={`https://wa.me/${PROFILE.phoneWa}`}
+              target="_blank"
+              rel="noreferrer noopener"
+              className="btn btn--ghost"
+            >
+              <TbBrandWhatsapp size={20} /> {t(UI.whatsapp)}
             </a>
             <a
               href={PROFILE.github}

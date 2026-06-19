@@ -49,8 +49,8 @@ export const SECTIONS: Record<string, Section> = {
     kicker: { he: "07 — צור קשר", en: "07 — Contact" },
     title: { he: "בואו נדבר", en: "Let's talk" },
     subtitle: {
-      he: "פתוח לתפקידי תוכנה, Full Stack ומערכות. הדרך הכי מהירה להגיע אליי היא במייל — בדרך כלל עונה באותו יום.",
-      en: "I'm open to software, full-stack and systems roles. Email is the fastest way to reach me, and I usually reply the same day.",
+      he: "פתוח לתפקידי תוכנה, Full Stack ומערכות. אפשר לפנות אליי במייל, בטלפון או בוואטסאפ — בדרך כלל עונה באותו יום.",
+      en: "I'm open to software, full-stack and systems roles. Reach me by email, phone or WhatsApp — I usually reply the same day.",
     },
   },
 };
@@ -126,6 +126,8 @@ export const UI: Record<string, Loc> = {
 
   contactTitle: { he: "בואו נדבר", en: "Let's talk" },
   emailMe: { he: "שלחו מייל", en: "Email me" },
+  whatsapp: { he: "וואטסאפ", en: "WhatsApp" },
+  phone: { he: "טלפון", en: "Phone" },
   github: { he: "GitHub", en: "GitHub" },
   linkedin: { he: "LinkedIn", en: "LinkedIn" },
   email: { he: "מייל", en: "Email" },
