@@ -39,9 +39,9 @@
   /* Card accents — subtle neutral tones on white */
   --accent-indigo: #17181c;
   --accent-rose: #5b6472;
-  --accent-emerald: #2f6f57;
+  --accent-emerald: #4a5568;
   --accent-amber: #8a6a3a;
-  --status: #16a34a;
+  --status: var(--brand);
 
   /* Theme-dependent fills, overlays, chrome */
   --fill-1: rgba(15, 23, 42, 0.03);
@@ -102,9 +102,9 @@ html[data-theme="dark"] {
 
   --accent-indigo: #c7cdd8;
   --accent-rose: #aab2c0;
-  --accent-emerald: #8fc7b0;
+  --accent-emerald: #aab2c0;
   --accent-amber: #d2b487;
-  --status: #34d399;
+  --status: var(--brand);
 
   --fill-1: rgba(255, 255, 255, 0.04);
   --fill-2: rgba(255, 255, 255, 0.07);
@@ -586,13 +586,13 @@ button {
   height: 8px;
   border-radius: 50%;
   background: var(--status);
-  box-shadow: 0 0 0 0 rgba(52, 211, 153, 0.6);
+  box-shadow: 0 0 0 0 rgba(148, 163, 184, 0.6);
   animation: pulse 2.4s infinite;
 }
 @keyframes pulse {
-  0% { box-shadow: 0 0 0 0 rgba(52, 211, 153, 0.5); }
-  70% { box-shadow: 0 0 0 8px rgba(52, 211, 153, 0); }
-  100% { box-shadow: 0 0 0 0 rgba(52, 211, 153, 0); }
+  0% { box-shadow: 0 0 0 0 rgba(148, 163, 184, 0.45); }
+  70% { box-shadow: 0 0 0 8px rgba(148, 163, 184, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(148, 163, 184, 0); }
 }
 .hero__name {
   font-size: clamp(2.6rem, 6vw, 4.5rem);
@@ -1397,19 +1397,19 @@ button {
   text-transform: uppercase;
 }
 .pso__label--problem {
-  color: #fda4af;
-  background: rgba(251, 113, 133, 0.14);
-  border: 1px solid rgba(251, 113, 133, 0.3);
+  color: var(--text-faint);
+  background: var(--fill-1);
+  border: 1px solid var(--border);
 }
 .pso__label--solution {
-  color: #a5b4fc;
-  background: var(--brand-soft);
+  color: var(--text-muted);
+  background: var(--fill-2);
   border: 1px solid var(--border-strong);
 }
 .pso__label--outcome {
-  color: #6ee7b7;
-  background: rgba(52, 211, 153, 0.14);
-  border: 1px solid rgba(52, 211, 153, 0.3);
+  color: var(--on-brand);
+  background: var(--brand);
+  border: 1px solid var(--brand);
 }
 .pso__text {
   color: var(--text-muted);
